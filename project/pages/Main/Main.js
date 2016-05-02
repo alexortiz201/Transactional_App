@@ -1,6 +1,6 @@
 import './main.css';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect }  from 'react-redux';
 
 // Components
@@ -8,7 +8,7 @@ import {
 	balanceIncrease,
 	balanceDecrease
 } from './Main-actions';
-import { Button } from '../../components/Button/Button';
+import { Button } from '../../components/Button/Button'; // eslint-disable-line no-unused-vars
 
 class Main extends React.Component {
 	componentWillMount() {}

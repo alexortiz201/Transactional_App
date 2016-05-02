@@ -1,22 +1,13 @@
-// import 'material-design-icons/iconfont/material-icons.css';
-// import 'materialize-css/dist/css/materialize.min.css';
-
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'; // eslint-disable-line no-unused-vars
 
-import Main from './pages/Main/Main';
+import Main from './pages/Main/Main'; // eslint-disable-line no-unused-vars
 
 import rootReducer from './reducers/root-reducer';
 import { createStoreWithMiddleware } from './store/create-store';
 
-
-// App level styles
-// import './app.less';
-
 const store = createStoreWithMiddleware(rootReducer);
-
+const initialJSX = <Provider store={store}><Main /></Provider>;
 render(
-	<Provider store={store}>
-		<Main />
-	</Provider>, document.getElementById('react'));
+	initialJSX, document.getElementById('react'));
