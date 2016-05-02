@@ -7,7 +7,7 @@ export const Button = ({
 }) => {
 	return (
 		<div
-			className={`button ${clazz}`}
+			className={`waves-effect waves-light btn-large ${clazz}`}
 			onClick={onClickFn} >
 			{text ? text : ''}
 		</div>

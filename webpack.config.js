@@ -1,7 +1,5 @@
 var webpack = require('webpack');
 
-console.log('->>>>>>>>>>>>>');
-console.log(__dirname);
 var config = {
     entry: [
       'webpack/hot/only-dev-server',

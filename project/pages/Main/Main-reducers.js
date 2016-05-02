@@ -13,26 +13,33 @@ export default function main(state = initialState, action) {
 	var payload = action.payload;
 
 	switch (action.type) {
+
 		case BALANCE_INCREASE:
+			let newBalanceInc = state.balance + payload;
+
 			return {
 				...state,
-				balance: state.balance + payload,
+				balance: newBalanceInc,
 				transactionLedger: [...state.transactionLedger,
-					cleanTransaction(action, state.balance + payload)]
+					cleanTransaction(action, newBalanceInc)]
 			};
+
 		case BALANCE_DECREASE:
+			let newBalanceDec = state.balance - payload;
+
 			return {
 				...state,
-				balance: state.balance - payload,
+				balance: newBalanceDec,
 				transactionLedger: [...state.transactionLedger,
-					cleanTransaction(action, state.balance + payload)]
+					cleanTransaction(action, newBalanceDec)]
 			};
+
 		default:
 			return state;
 	}
 }
 
 function cleanTransaction(action, newBalance) {
-	return `${action.type} By Amount ${action.payload}:
-		New Total ${newBalance}`;
+	return `${action.type} By Amount ${action.payload.toFixed(2)}:
+		New Total ${newBalance.toFixed(2)}`;
 }
