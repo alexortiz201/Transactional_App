@@ -28,7 +28,7 @@ var config = {
                 query: {
                     // https://github.com/babel/babel-loader#options
                     cacheDirectory: true,
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'babel-preset-stage-0', 'react']
                 }
             },
             { test: /\.css$/, loader: "style!css" }

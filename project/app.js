@@ -2,7 +2,6 @@
 // import 'materialize-css/dist/css/materialize.min.css';
 
 import React from 'react';
-import { Router } from 'react-router';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 

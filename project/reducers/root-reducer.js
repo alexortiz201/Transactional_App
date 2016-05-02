@@ -2,8 +2,8 @@
 import {combineReducers} from 'redux';
 
 // Importing reducers here
-// import main from '../pages/Main/Main-reducers';
+import main from '../pages/Main/Main-reducers';
 
 export default combineReducers({
-  //main
+  main
 });
