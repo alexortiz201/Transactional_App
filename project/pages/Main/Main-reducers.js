@@ -39,7 +39,7 @@ export default function main(state = initialState, action) {
 	}
 }
 
-function cleanTransaction(action, newBalance) {
+export function cleanTransaction(action, newBalance) {
 	return `${action.type} By Amount ${action.payload.toFixed(2)}:
 		New Total ${newBalance.toFixed(2)}`;
 }
